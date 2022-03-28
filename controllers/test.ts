@@ -10,8 +10,7 @@ const controller = express.Router();
 
 // GET
 controller.get('/', async (req: Request, res: Response) => {
-  await models.testModel
-    .find({})
+  await models.TestModel.find({})
     .then((data) => {
       res.json({
         data_array: data,
@@ -27,7 +26,7 @@ controller.get('/', async (req: Request, res: Response) => {
 
 // POST
 controller.post('/', async (req: Request, res: Response) => {
-  const newTest = new models.testModel({
+  const newTest = new models.TestModel({
     title: req.body.title,
     desc: req.body.desc || '',
   });

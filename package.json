@@ -9,8 +9,8 @@
     "build": "tsc",
     "dev": "nodemon --watch '**/*.ts' --exec ts-node server.ts",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier write .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier",
     "prepare": "husky install",
     "postinstall": "npm run prepare"
   },
@@ -44,16 +44,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx lint-staged",
+      "pre-commit": "lint-staged",
       "pre-push": "npm run test"
     }
   },
   "lint-staged": {
-    "**/*.{ts|js}": [
-      "npm run format",
+    "**/*.ts|js": [
       "npm run lint:fix",
-      "npm run test",
-      "git add"
+      "npm run format",
+      "npm run test"
     ]
   }
 }
