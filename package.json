@@ -10,7 +10,9 @@
     "dev": "nodemon --watch '**/*.ts' --exec 'ts-node' server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "pretty": "prettier"
+    "pretty": "prettier",
+    "husky:install": "husky install",
+    "husky:uninstall": "husky uninstall"
   },
   "author": "bakebit-team-2",
   "license": "ISC",
@@ -20,11 +22,6 @@
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.8"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",

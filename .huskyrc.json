@@ -1,0 +1,6 @@
+{
+    "hooks": {
+        "pre-commit": "npm run test -- --watchAll=false && pretty-quick --staged && eslin .",
+        "pre-push": "npm run test:noWatch"
+    }
+}
