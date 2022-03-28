@@ -1,0 +1,32 @@
+body {
+    background-color: #ededed;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #333333;
+    width: 100%;
+    max-width: 720px;
+    min-height: 50vh;
+    padding: 5rem 2rem;
+    margin: 2rem auto;
+    border-radius: .6rem;
+
+    &__title {
+        display: inline-block;
+        color: #208f26;
+        font-weight: 600;
+        text-transform: capitalize;
+
+        &__err {
+            color: crimson;
+        }
+    }
+}
