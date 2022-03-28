@@ -14,7 +14,7 @@ controller.get('/', async (req: Request, res: Response) => {
     .find({})
     .then((data) => {
       res.json({
-        test_data_array: data,
+        data_array: data,
       });
     })
     .catch((err) => {
