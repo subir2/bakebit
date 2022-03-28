@@ -10,9 +10,15 @@
     "dev": "nodemon --watch '**/*.ts' --exec 'ts-node' server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "pretty": "prettier",
+    "format": "prettier",
     "husky:install": "husky install",
     "husky:uninstall": "husky uninstall"
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "npm run test -- --watchAll=false && pretty-quick --staged && eslin .",
+        "pre-push": "npm run test:noWatch"
+    }
   },
   "author": "bakebit-team-2",
   "license": "ISC",
