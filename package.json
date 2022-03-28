@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "backend-mvc-expressjs-ts",
   "version": "1.0.0",
   "description": "backend boilerplate",
   "main": "server.js",
@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "npm run prepare"
   },
   "author": "bakebit-team-2",
   "license": "ISC",
