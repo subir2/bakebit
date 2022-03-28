@@ -7,11 +7,10 @@
     "test": "echo JEST is coming soon ... for TDD",
     "start": "node dist/server.js",
     "build": "tsc",
-    "dev": "nodemon --watch '**/*.ts' --exec 'ts-node' server.ts",
+    "dev": "nodemon --watch '**/*.ts' --exec ts-node server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier",
-    "postinstall": "husky install",
+    "format": "prettier write .",
     "prepare": "husky install"
   },
   "author": "bakebit-team-2",
@@ -49,7 +48,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts|js}": [
+    "**/*.{ts|js}": [
       "npm run format",
       "npm run lint:fix",
       "git add"
