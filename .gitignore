@@ -1,0 +1,15 @@
+node_modules/
+cache/
+build/
+dist/
+.env
+.env.local
+.env.test
+.local.env
+
+
+# unnecessary
+.cache
+.ini
+.exe
+.DS_Store
