@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express';
+import controllers from '../controllers';
 
 /**==============================================*
  * Handling All REST APIs routes
@@ -14,6 +15,10 @@ router.get('/', (req: Request, res: Response) => {
         reqTime: new Date(Date.now()).toUTCString()
     });
 });
+
+
+// Test Controller
+router.use('/test', controllers.testController);
 
 
 

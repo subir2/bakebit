@@ -20,7 +20,7 @@ router.get('/', (req: Request, res: Response) => {
     res.sendFile(path.resolve("views/welcome.html"));
 });
 
-
+// Not found 404
 router.use('*', (req: Request, res: Response) => {
     res.sendFile(path.resolve("views/404.html"));
 });
