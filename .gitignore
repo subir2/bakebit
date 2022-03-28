@@ -6,7 +6,6 @@ dist/
 .env.local
 .env.test
 .local.env
-.husky
 
 
 # unnecessary
