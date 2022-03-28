@@ -1,10 +1,5 @@
-import test from './test'
+import Test from './test';
 
-
-// export all of them
-
-const models = {
-    testModel: test
+export default {
+  TestModel: Test,
 };
-
-export default  models;
