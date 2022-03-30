@@ -16,12 +16,14 @@ dotenv.config(); // parsing .env files [default: .env]
 // Database connection
 const mongoUri: string = process.env.MONGO_URI || ''; // only accepts string
 mongoose
-  .connect(mongoUri, {})
+  .connect(mongoUri, {
+    autoIndex: false,
+  })
   .then(() => console.log(`\nDatabase is established!`))
   .catch((err) => console.log(err.message));
 
 // Server instance
-const port: number | any = process.env.PORT || 5000;
+const port: number = Number(process.env.PORT) || 5000;
 app.listen(port, () => {
   console.log(`\n⚡️Backend is up & running...\nhttp://localhost:${port}`);
 });
