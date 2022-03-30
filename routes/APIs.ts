@@ -23,6 +23,7 @@ router.use('/test', controllers.testController);
 router.use('/auth', [
   controllers.auth.registerController,
   controllers.auth.loginController,
+  controllers.userController,
 ]);
 
 export default router;
