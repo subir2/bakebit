@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
@@ -22,9 +23,10 @@ export default async function verifyJWT(
 
   try {
     const decode = await jwt.verify(token, process.env.JWT_SECRET || 'bakebit');
+    // @ts-ignore
     req.user = decode;
     next(); // procced to next
-  } catch (err) {
+  } catch (err: any) {
     return res.status(412).json({
       message: err.message,
       errors: err,
