@@ -18,5 +18,7 @@ router.get('/', (req: Request, res: Response) => {
 
 // Test Controller
 router.use('/test', controllers.testController);
+// Auth Controllers
+router.use('/auth', controllers.auth.registerController);
 
 export default router;
