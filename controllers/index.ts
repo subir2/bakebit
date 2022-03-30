@@ -1,9 +1,11 @@
 import test from './test';
 import auth from './auth';
+// import user from './user';
 
 // exports
 
 export default {
-  testController: test,
   auth,
+  testController: test,
+  // userController: user,
 };
