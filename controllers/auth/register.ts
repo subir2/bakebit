@@ -36,7 +36,7 @@ controller.post('/register', async (req: Request, res: Response) => {
         // send response
         res.status(201).json({
           message: 'Registration has been successfull!',
-          user_data: {
+          userInfo: {
             name: data.name,
             email: data.email,
             role: data.role,
@@ -44,7 +44,6 @@ controller.post('/register', async (req: Request, res: Response) => {
             updatedAt: data.updatedAt,
           },
           accessToken: jwtToken,
-          reqIp: req.ip,
         });
       })
       .catch((err: any) => {
